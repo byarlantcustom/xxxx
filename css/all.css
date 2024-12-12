@@ -1,0 +1,858 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*----------------start there-------------------------*/
+body{
+    margin: 0 auto;
+    width: 1024px;
+    font-family: "Microsoft YaHei", sans-serif;
+	position: relative;
+	
+
+}
+
+a {
+    cursor: pointer;
+	text-decoration: none;
+}
+
+/*------------------layout-menu--------------------*/
+.menu{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background:rgba(74, 74, 74, 0.5);
+	box-sizing: border-box;
+	height: 72px;
+	padding-left:42px ;
+	padding-right:42px ;
+	width: 1024px;
+	position: fixed;
+	z-index: 1000;
+
+}
+.menu h1 a{
+	display: block;
+	width: 170px;
+	height: 36px;
+	background-image: url(../img/header-logo.png);
+text-indent: 101%;
+white-space: nowrap;
+overflow: hidden;
+	
+}
+.navbar ul{
+	display: flex;}
+
+	.navbar ul li{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+.navbar ul li a {
+	display: block;
+	line-height: 72px;
+	height: 72px;
+	color: #fff;
+
+	position: relative;
+	padding-left: 15px;
+padding-right:15px ;
+}
+
+.navbar ul li a::after{
+	content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 3px;
+background-color: aquamarine;
+transform: scaleX(0);
+transform-origin: bottom left;
+transition: transform 0.3s ease;
+}
+.navbar ul li a:hover::after
+,.navbar ul li a:focus::after{
+	transform: scaleX(1);
+
+	
+}
+
+.navbar ul li a:hover{
+	color: aquamarine;
+}
+
+/*--------------layout-footer-----------------*/
+
+.footer{
+	background: #323228;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 42px;
+	padding-right: 42px;
+	padding-top:37px ;
+	padding-bottom: 37px;
+}
+.footer-left h2 a{
+	display: block;
+	background-image: url(../img/footer_logo.png);
+	width: 170px;
+height: 36px;
+text-indent: 101%;
+white-space: nowrap;
+overflow: hidden;
+
+}
+.footer-left h2 span{
+	display: flex;
+	justify-content: flex-end;
+	color:#9b9b9b ;
+}
+
+.footer-right {
+	display: flex;
+
+}
+.footer-right li a{
+	
+	color: #fff;
+}
+
+.footer-facebook,.footer-twitter,.footer-instagram{
+	display: block;
+	text-indent: 101%;
+white-space: nowrap;
+overflow: hidden;
+width: 32px;
+height: 32px;
+margin-left: 22px;
+
+
+}
+.footer-facebook{
+
+background-image: url(../img/facebook.png);
+
+
+
+}
+.footer-twitter{
+
+background-image: url(../img/twitter.png);
+
+}
+.footer-instagram{
+
+background-image: url(../img/instagram.png);
+
+}
+/*--------------index--------------------*/
+.banner{
+	background-image: url(../img/banner_photo.png);
+	height: 560px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 60px;
+}
+.banner h2 {
+	
+	display: flex;
+flex-direction: column;
+padding-left: 42px;
+
+}
+.banner h2 p{
+	
+	color:  #00cc99;
+	padding-bottom: 42px;
+	font-size: 48px;
+	}
+	.banner h2 span{
+color: #fff;
+	}	
+	.banner h2 a{
+		text-align: center;
+		width: 220px;
+		background: #00cc99 ;
+		color: #fff;
+		padding-top: 17px;
+		padding-bottom: 17px;
+		border-radius: 5px;
+	}
+	.banner h2 a::after{
+		content:" →";
+		margin-left: 31px;
+	}
+	.Course-box{
+		padding-left: 42px;
+		padding-right: 42px;
+	}
+
+.Course-title{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.Course-title h3{
+	color: #00cc99;
+	font-size: 36px;
+}
+.Course-title{
+	padding-bottom: 30px;
+}
+.Course-title h3 span{
+	font-size: 20px;
+	color: #9b9b9b;
+	font-weight: lighter;
+	margin-left: 20px;
+}
+.Course-title a{
+	display: block;
+	border: 2px solid #00cc99;
+	border-radius: 5px;
+	padding: 7px;
+	color: #00cc99;
+}
+.Course-sheet{
+	padding-bottom: 60px;
+}
+.Course-comparison{
+	display: flex;
+	justify-content: space-between;
+
+
+}
+.sheet-content th,.sheet-content td{
+	border-top: 2px solid #ebebeb;
+	border-bottom:2px solid #ebebeb;
+
+}
+.Course-comparison li{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 300px;
+	padding-left:10px ;
+	padding-right:10px;
+	box-shadow: 3px 3px 5px #ccc;
+margin-left: 8px;
+margin-right: 8px;
+margin-bottom: 40px;
+}
+.Course-comparison img{
+	padding-top: 26px;
+	padding-bottom: 15px;
+}
+.Course-comparison li h4{
+	font-weight: 500;
+	font-size: 20px;
+	padding-bottom: 15px;
+}
+.Course-comparison li p{
+	line-height: 1.5;
+	padding-bottom: 26px;
+}
+
+.Course-sheet h3{
+	color: #00cc99;
+	font-size: 36px;
+	display: flex;
+	
+	align-items: center;
+	padding-left: 42px;
+		padding-right: 42px;
+		margin-bottom: 30px;
+}
+.Course-sheet span{
+	font-size: 20px;
+	color: #9b9b9b;
+	font-weight: lighter;
+	margin-left: 20px;
+	
+}
+.sheet-content{
+	margin: 0 auto;
+	width: 940px;
+}
+.sheet-content th{
+	background: #ebebeb;
+}
+.sheet-content th,.sheet-content td{
+	font-weight: lighter;
+	padding-top:17px ;
+	padding-bottom:17px ;
+	text-align: center;
+}
+.index-color{
+	color: #00cc99;
+}
+.Home-form{
+	
+	background: #f4f4f4;
+	padding-left:42px ;
+	padding-right: 42px;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 140px;
+	padding-bottom: 140px;
+}
+.Home-form h3{
+	height: 134px;
+	
+	display: flex;
+	align-items: center;
+}
+.Home-form h3 span{
+	font-size: 30px;
+	line-height: 60px;
+	color: #323223;
+	font-weight: lighter;
+
+}
+.index-name{
+	display: flex;
+	flex-direction: column;
+}
+.index-name input{
+	display: block;
+	margin-bottom: 30px;
+	width: 460px;
+	height: 52px;
+	border: none;
+	border-radius: 5px;
+	font-size: 20px;
+	outline: none;/* 移除邊框線條 */
+}
+.index-name input::placeholder{
+	font-size: 20px;
+	padding-left: 20px;
+}
+
+.index-btn{
+	display: flex;
+	flex-direction: row-reverse;
+	
+}
+.index-btn input{
+	background:  #00cc99;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+padding: 17px 45px;
+font-size: 20px;
+}
+.index-btn input:hover{
+	cursor: pointer;
+}
+
+
+
+/*---------------class---------------------*/
+.class-banner{
+	background-image: url(../img/banner2.png);
+	height: 560px;
+	width: 1024px;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	margin-bottom: 60px;
+}
+.class-item{
+
+	display: flex;
+	justify-content: space-between;
+	
+	width: 100%;
+	
+	padding-left: 36px;
+	padding-right: 58px;
+	position: relative;
+}
+.class-item h2{
+	color: #fff;
+	font-size: 48px;
+	padding-bottom: 20px;
+}
+.class-item h2 p{
+	color: #00cc99;
+	font-size: 24px;
+}
+.class-img{
+	
+	display: flex;
+	position: absolute;
+	right: 58px;
+	top: -70px;
+	
+}
+.class-img img{
+	
+	padding-left:16px ;
+	padding-right: 16px;
+	width: 94px;
+	height: 132px;
+}
+.class-banner{
+	color: #fff;
+}
+.class-btn2{
+padding-top: 60px;
+}
+.class-btn2 a{
+	background: #00cc99;
+	display: block;
+	width: 219px;
+	display: flex;
+	justify-content: center;
+	
+	color: #fff;
+	font-size: 20px;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	border-radius: 5px;
+}
+.class-btn2 a::after{
+	content: '→';
+	color: #fff;
+	font-size: 20px;
+	padding-left: 30px;
+}
+.Course-page2{
+	width: 620px;
+	margin: 0 auto;
+}
+.Teacher-introduction{
+	display: flex;
+	justify-content: space-between;
+
+
+	margin-bottom: 60px;
+	
+}
+.Teacher-introduction h3{
+	font-size: 36px;
+	color: #00cc99;
+	
+	padding-top: 70px;
+}
+.Teacher-introduction h3 p{
+	line-height: 50px;
+	color: #323228;
+}
+.Teacher-introduction ul {
+	padding-top: 70px;
+	
+}
+.Teacher-introduction ul li{
+	color: #9b9b9b;
+	padding-bottom: 10px;
+	font-size: 16px;
+}
+.Teacher-introduction ul li::before {
+	content: '‧';
+	padding-right: 35px;
+}
+.Course-features{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 60px;
+}
+.Course-features h3{
+	
+	font-size: 36px;
+	font-weight: lighter;
+	color: #00cc99;
+	padding-bottom: 30px;
+	
+}
+.Course-features h3::after{
+	content: "六角課程的四大優點";
+	font-weight: lighter;
+	font-size: 20px;
+	color: #9b9b9b;
+	padding-left: 36px;
+	
+}
+.text-item{
+	list-style-type: decimal;
+	list-style-position: outside;
+	
+    margin-left: 20px; /* 將數字向左移動，與 div 左側對齊 */
+	}
+	.text-item li{
+
+		padding-left: 20px; /* 確保文字部分與數字之間保持距離 */
+		padding-bottom: 10px;
+		color: #323223;
+		font-weight: lighter;
+	}
+	.Course-Outline{
+		display: flex;
+	flex-direction: column;
+	padding-bottom: 60px;
+	}
+	.Course-Outline h3{
+		color: #00cc99;
+		font-size: 36px;
+		font-weight: lighter;
+		padding-bottom: 30px;
+	}
+
+	
+.Course-Outline h3::after{
+content: "六角課程的四大優點";
+color: #9b9b9b;
+font-size: 20px;
+padding-left: 30px;
+}
+.Outline tr th{
+	text-align: left;
+	background-color: #ebebeb;
+	color: #000;
+	
+}
+.Outline tr th,.Outline tr td{
+display: block;
+display: flex;
+align-items: center;
+height: 50px;
+
+padding-left: 36px;
+font-weight: lighter;
+	
+}
+.Outline tr td{
+	color: #9b9b9b;
+}
+.register-page2{
+	background: #ebebeb;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	padding-top: 156px;
+	padding-bottom: 156px;
+	
+}
+.register-page2 p{
+	font-size: 30px;
+	color: #9b9b9b;
+	font-weight: lighter;
+	line-height: 40px;
+	padding-right: 72px;
+}
+.register-page2 a{
+	background: #00cc99;
+color: #fff;
+padding:16px 38px ;
+border-radius: 5px;
+}
+
+
+
+
+/*----------------faq--------------------*/
+
+.faq-banner{
+	background-image: url(../img/banner3.png);
+	width: 100%;
+	height: 560px;
+
+text-align: center;
+margin-bottom: 62px;
+}
+.faq-banner h3,.faq-banner p{
+	font-weight: lighter;
+}
+.faq-banner h3{
+	color: #fff;
+	font-size:48px ;
+	padding-top: 163px;
+	padding-bottom: 18px;
+}
+.faq-banner p{
+	font-size: 24px;
+	color: #00cc99;
+	padding-bottom: 52px;
+}
+.search-form {
+	margin: 0 auto;
+    width: 620px;
+    height: 52px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* 半徑為高度的一半，使其成為圓角 */
+    overflow: hidden;
+    display: flex;
+	
+}
+
+.search-form input {
+    width: 100%;
+    height: 100%;
+    padding: 0 60px 0 20px; /* 右側留出按鈕的位置，左側留出輸入框內部填充 */
+    border: none;
+    font-size: 16px;
+    outline: none; /* 去除點擊時的邊框 */
+}
+
+.search-form button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 52px;
+    height: 52px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.search-icon {
+background-image: url(../img/search\ icon.png);
+width: 27px;
+height: 27px;
+}
+
+.faq-content{
+	margin: 0 auto;
+	
+	width: 775px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+.common{
+	padding-bottom: 60px;
+	
+}
+.common h3{
+	color: #00cc99;
+	font-size: 36px;
+	font-weight: lighter;
+	padding-bottom: 17px;
+}
+.common h3::after{
+	content: "你想問的說不定也在這裡";
+	color: #9b9b9b;
+	font-weight: lighter;
+	font-size: 20px;
+	padding-left:25px ;
+}
+.common h4{
+	font-weight: lighter;
+	font-size: 20px;
+	padding-top: 17px;
+	padding-bottom: 10px;
+}
+.common p{
+	font-weight: lighter;
+	color: #9b9b9b;
+	font-size: 16px;
+	line-height: 20px;
+}
+.payment{
+	padding-bottom: 60px;
+}
+.payment h3{
+	color: #00cc99;
+	font-size: 36px;
+	font-weight: lighter;
+	padding-bottom: 17px;
+}
+.payment h3::after{
+	content: "付款方式保證最多元";
+	color: #9b9b9b;
+	font-weight: lighter;
+	font-size: 20px;
+	padding-left:25px ;
+}
+.payment h4{
+	font-weight: lighter;
+	font-size: 20px;
+	padding-top: 17px;
+	padding-bottom: 10px;
+}
+.payment p{
+	font-weight: lighter;
+	color: #9b9b9b;
+	font-size: 16px;
+	line-height: 20px;
+}
+.payment ol{
+	
+	padding-top:10px ;
+	list-style-type: decimal;
+	list-style-position: outside;
+	margin-left: 36px;
+}
+.payment ol li{
+	font-weight: lighter;
+	color: #9b9b9b;
+	padding-left: 20px;
+	line-height: 20px;
+}
+.payment p a{
+	color: #00cc99;
+}
+.refund{
+	padding-bottom:60px ;
+}
+.refund h3{
+	color: #00cc99;
+	font-size: 36px;
+	font-weight: lighter;
+	padding-bottom: 17px;
+
+}
+.refund h3::after{
+	content: "期待你再次成為我們的學生";
+	color: #9b9b9b;
+	font-weight: lighter;
+	font-size: 20px;
+	padding-left:25px ;
+}
+.refund h4{
+	font-weight: lighter;
+	font-size: 20px;
+	padding-top: 17px;
+	padding-bottom: 10px;
+}
+.refund p{
+	font-weight: lighter;
+	color: #9b9b9b;
+	font-size: 16px;
+	line-height: 20px;
+}
+.refund ul{
+	padding-top:10px ;
+}
+.refund ul li{
+	color: #9b9b9b;
+	line-height: 20px;
+	font-weight: lighter;
+	
+}
+.refund ul li::before{
+	content: "‧";
+	padding-right:33px ;
+	margin-left: 36px;
+}
+
+.faq-bottom{
+	background: #ebebeb;
+	padding-top: 120px;
+	display: flex;
+	justify-content: space-between;
+	padding-left: 40px;
+	padding-right: 40px;
+
+
+}
+.faq-bottom h3{
+	color: #323223;
+	font-weight: lighter;
+	line-height: 40px;
+	
+	font-size:30px ;
+}
+
+
+.faq-bottom form{
+	display: flex;
+	flex-direction: column;
+}
+.faq-bottom form input,.faq-bottom form textarea{
+	margin-bottom: 20px;
+	border-radius: 5px;
+	padding-left: 20px;
+	font-size: 20px;
+	font-weight: lighter;
+}
+.faq-bottom form input{
+	
+	border: none;
+	outline: none;/* 移除邊框線條 */
+	height: 50px;
+	width: 460px;
+	
+
+}
+.faq-bottom form textarea{
+	width: 460px;
+    height: 200px;
+    resize: none;
+	outline: none;
+	border: none;
+	padding-top: 15px;
+}
+.faq-btn{
+display: flex;
+flex-direction: row-reverse;
+padding-bottom: 30px;
+}
+.faq-btn input[type="submit"] {
+    background: #00cc99; /* 設置背景色 */
+    color: white; /* 設置字體顏色 */
+    padding: 10px 10px; /* 調整內邊距 */
+    border: none; /* 移除邊框 */
+    border-radius: 5px; /* 邊角圓滑 */
+    cursor: pointer; /* 鼠標變成指標 */
+    font-size: 16px; /* 字體大小 */
+	width: 140px;
+	
+}
+/*------------------------------------*/
+.faq-btn input[type="submit"]:hover {
+    background-color: #0aa57f; /* 滑鼠懸停效果 */
+}
